@@ -1,0 +1,56 @@
+.dashbordEdit.purpleBlackCls {
+  background-image: url(~@/assets/images/dashboard/purpleBlackSkin/bg.png);
+  #allApps {
+    .dragglelistDiv {
+      background-color: transparent;
+    }
+  }
+  .dashboardHead {
+    .el-button--primary {
+      background-color: #32a2eb !important;
+      border-color: #32a2eb !important;
+    }
+  }
+  .drageCls {
+    .canvas {
+      .smallBg {
+        background-image: none;
+        background-color: rgba($color: #000, $alpha: 0.2);
+        .SmallComponent{
+          //border:5px solid #39233d;
+          //border-radius:8px;
+          .leftIcon{
+            color:#7a2a4f;
+          }
+          .bgClass{
+            background:#39233d;
+          }
+        }
+
+      }
+
+      .bigBg {
+        background-image: none;
+        background-color: rgba($color: #000, $alpha: 0.2);
+        //.en-big-module{
+        //  border:3px solid #39233d;
+        //  border-radius:8px;
+        //}
+        //.big-module{
+        //  border:3px solid #39233d;
+        //  border-radius:8px;
+        //}
+        .leftInfo{
+          .leafName{
+            background:#39233d;
+          }
+        }
+        .big-component{
+          .left{
+            background:#39233d;
+          }
+        }
+      }
+    }
+  }
+}

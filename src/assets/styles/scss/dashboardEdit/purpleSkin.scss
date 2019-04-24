@@ -1,0 +1,91 @@
+$yellowColor:#f1b76b;
+
+.dashbordEdit.purpleCls {
+  background-image: url(~@/assets/images/dashboard/purpleSkin/bg.png);
+  .common-big-module{
+    .el-progress-bar__outer{
+      background:#2b1868;
+    }
+  }
+  #allApps {
+    .dragglelistDiv {
+      background-color: rgba($color: #48398d, $alpha: 0.8);
+    }
+
+    .activeModify {
+      background-color: #8172c6;
+    }
+  }
+  .SmokeBigCenter{
+    ul li{
+      color: #fff;
+    }
+  }
+  .dashboardHead {
+    //.el-button--primary {
+    //  background-color: $yellowColor !important;
+    //  border-color: $yellowColor !important;
+    //}
+  }
+
+  .drageCls {
+    .canvas {
+      .smallBg {
+        background-image: url(~@/assets/images/dashboard/purpleSkin/smallBg.png);
+        .SmallComponent {
+          .bgClass {
+            background-color: #2b1868;// #5B4F93
+            color: #fff;
+          }
+
+          .num {
+            color: #fff;// #F4F2FF
+          }
+
+          .updataTime {
+            color: #F4F2FF;
+          }
+        }
+      }
+
+      .bigBg {
+        background-image: url(~@/assets/images/dashboard/purpleSkin/bigBg.png);
+
+        .leftInfo {
+          .leafName {
+            background-color: #2b1868!important;// #5B4F93
+          }
+        }
+
+        .big-component {
+          .left {
+            background-color: #5B4F93;
+          }
+          .right {
+            .top{
+              color: #fff;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      //.borderShow:hover {
+      //  border-color: $yellowColor;
+      //  border-radius: 8px;
+      //}
+
+      .leftIcon {
+        color: #8542D4;// c3bbe9
+      }
+    }
+  }
+
+  #rightMenu {
+
+    .appCenter,
+    .appHide {
+      background-color: rgba($color: #402E93, $alpha: 0.7);
+    }
+  }
+}

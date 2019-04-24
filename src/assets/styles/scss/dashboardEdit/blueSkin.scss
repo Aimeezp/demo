@@ -1,0 +1,84 @@
+$yellowColor:#f1b76b;
+.dashbordEdit.blueCls {
+  background-image: url(~@/assets/images/dashboard/blueSkin/bg.png);
+  #allApps{
+    .dragglelistDiv {
+      background-color: rgba($color: #1675BF, $alpha: 0.7);
+    }
+    .activeModify{
+      background:#32a2eb;
+    }
+  }
+  #rightMenu{
+    .appCenter,
+    .appHide{
+      background-color: rgba($color: #2D85CC, $alpha: 0.7);
+    }
+  }
+  .dashboardHead {
+    //.el-button--primary {
+    //  background-color: $yellowColor !important;
+    //  border-color: $yellowColor !important;
+    //}
+  }
+  .drageCls {
+    .canvas {
+      .smallBg {
+        background-image: url(~@/assets/images/dashboard/blueSkin/smallBg.png);
+
+        .SmallComponent {
+          .bgClass {
+            opacity: 1;
+            background:#263870;
+            color:#cedaff;
+          }
+
+          .num {
+            color: #c8d2f0;
+          }
+
+          .updataTime {
+            color: #c8d2f0;
+          }
+        }
+      }
+
+      .bigBg {
+        background-image: url(~@/assets/images/dashboard/blueSkin/bigBg.png);
+
+        .leftInfo {
+          .leafName {
+            background:#2b3c71!important;
+          }
+        }
+        .content{
+          .right{
+            color:#c8d2f0;
+          }
+        }
+        .big-component{
+          > div{
+            .left {
+              background:#263870;
+            }
+            .right{
+              .top,
+              .bottom{
+                color:#c8d2f0;
+              }
+            }
+          }
+        }
+      }
+
+      //.borderShow:hover {
+      //  border-color: #ffc77e;
+      //  border-radius: 8px;
+      //}
+
+      .leftIcon {
+        color: #3299CA;// #586db2
+      }
+    }
+  }
+}
