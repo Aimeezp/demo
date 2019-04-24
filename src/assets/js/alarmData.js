@@ -45,7 +45,7 @@ class SendWarning {
           creater: '李倩',
           createTime: alarmTime,
           updater: '李倩',
-          updateTime: alarmTime,
+          updateTime: '',
           sheetFrom: 1,
           dmpType: 2,
           timestamp: data[0].data.timestamp,

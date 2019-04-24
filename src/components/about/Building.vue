@@ -226,4 +226,5 @@ export default {
     }
   }
 }
+@import "~scss_about1920";
 </style>

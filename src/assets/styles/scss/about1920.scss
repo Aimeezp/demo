@@ -1,0 +1,357 @@
+@media screen and (min-width: 1920px) {
+
+  // 公共头部 
+  // .aboutNavHeader {
+  //   height: 80px;
+
+  //   .navPart {
+  //     font-size: 22px;
+  //   }
+
+  //   .headerImg {
+  //     height: 52px;
+  //   }
+
+  //   .nowTimeCls {
+  //     width: 285px;
+
+  //     .timeCls {
+  //       font-size: 20px;
+  //     }
+  //   }
+  // }
+
+  #about-wrapper {
+
+    // 右下角开关图片
+    .switch-box {
+      width: 120px;
+      height: 120px;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    // 透明背景
+    .shadow-box {
+      right: 130px;
+      width: 1350px;
+      height: auto;
+      padding: 67px 0 0 45px;
+    }
+
+    // 左侧导航
+    .circle-nav {
+      ul li {
+        height: 70px;
+        line-height: 70px;
+        margin-bottom: 16px;
+
+        i {
+          width: 16px;
+          height: 16px;
+        }
+
+        span {
+          font-size: 27px;
+        }
+
+        &.cur span {
+          font-size: 44px;
+        }
+      }
+    }
+
+    // icon列表
+    .icon-list {
+      ul {
+        li {
+          margin: 0 18px 80px;
+
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // 多边形
+  .pentagon-wrap {
+    width: 262px !important;
+
+    .pentagon {
+      height: 38px !important;
+      clip-path: polygon(50px 0%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%, 0% 40px) !important;
+    }
+
+    .line {
+      left: -6px !important;
+      top: 19px !important;
+      width: 62px !important;
+      transform: rotate(-40deg) !important;
+    }
+
+    .main ul li {
+      margin-bottom: 45px !important;
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      p {
+        font-size: 24px !important;
+      }
+    }
+  }
+
+  // 视频
+  .video-box {
+    width: 1080px;
+    height: 660px;
+    left: 30%;
+
+    video {
+      width: 1000px;
+    }
+  }
+
+  // 医院
+  .person-img {
+    width: 390px;
+    bottom: 90px;
+  }
+
+  .hand-feel {
+    left: 1009px;
+    top: 450px;
+
+    .line1 {
+      width: 75px;
+      right: -75px;
+    }
+  }
+
+  .smoke {
+    left: 1030px;
+    top: 110px;
+  }
+
+  .dust {
+    left: 631px;
+    top: 243px;
+
+    .line1 {
+      .line2 {
+        width: 100px;
+        left: -100px;
+      }
+    }
+  }
+
+  .alarm-btn {
+    left: 533px;
+    top: 618px;
+
+    .line1 {
+      .line2 {
+        width: 90px;
+        left: -90px;
+        transform: rotate(-65deg);
+      }
+    }
+  }
+
+  .hos-bottom {
+    width: 745px !important;
+    left: 606px;
+
+    .pentagon {
+      width: 745px !important;
+
+    }
+
+    .main {
+      width: 745px !important;
+
+      ul li {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  // 养老
+  .bracelet {
+    left: 1090px;
+    top: 688px;
+  }
+
+  .cell-four {
+    top: 593px;
+    left: 475px;
+  }
+
+  .infraRed {
+    left: 647px;
+    top: 178px;
+  }
+
+  // 楼宇
+  .smoke1 {
+    top: 208px;
+    left: 940px;
+  }
+
+  .doorlock {
+    top: 380px;
+    left: 1180px;
+
+    .line1 {
+      .line2 {
+        width: 158px;
+        right: -158px;
+
+        .circle {
+          left: 158px;
+        }
+      }
+    }
+  }
+
+  .geoMonitor1 {
+    top: 500px;
+    left: 813px;
+  }
+
+  .lift {
+    top: 680px;
+    left: 845px;
+  }
+
+  .arc {
+    bottom: 35px;
+    left: 676px;
+  }
+
+  .h2s {
+    bottom: 115px;
+    right: 250px;
+  }
+
+  .firePressure {
+    top: 600px;
+    right: 110px;
+  }
+
+  // 商业
+  .b-block1 {
+    top: 300px;
+    left: 766px;
+  }
+
+  .b-block2 {
+    top: 150px;
+    right: 290px;
+  }
+
+  .pad1 {
+    top: 577px;
+    right: 428px;
+  }
+
+  // 城市
+  .dust2 {
+    top: 92px;
+    right: 600px;
+  }
+
+  .noise {
+    top: 210px;
+    left: 601px;
+  }
+
+  .b-block3 {
+    top: 485px;
+    left: 570px;
+
+    .line1 {
+      width: 170px;
+      right: -170px;
+    }
+  }
+
+  .b-block4 {
+    bottom: 64px;
+    right: 459px;
+  }
+
+  .light1 {
+    top: 360px;
+    right: 170px;
+  }
+
+  .b-block5 {
+    top: 100px;
+    left: 840px;
+  }
+
+  .doorlock1 {
+    top: 250px;
+    right: 273px;
+  }
+
+  .geoMonitor2 {
+    bottom: 350px;
+    right: 671px;
+  }
+
+  // 校园
+  .b-block6 {
+    top: 100px;
+    left: 945px;
+  }
+
+  .camera {
+    top: 515px;
+    left: 595px;
+  }
+
+  .b-block7 {
+    bottom: 295px;
+    right: 333px;
+  }
+
+  .light2 {
+    right: 241px;
+  }
+
+  // 园区
+  .smoke2 {
+    top: 122px;
+    left: 724px;
+  }
+
+  .b-block8 {
+    top: 108px;
+    right: 345px;
+  }
+
+  .doorlock3 {
+    top: 536px;
+    right: 503px;
+  }
+
+  .geoMonitor3 {
+    bottom: 183px;
+    right: 671px;
+  }
+
+  .water1 {
+    bottom: 154px;
+    right: 231px;
+  }
+}

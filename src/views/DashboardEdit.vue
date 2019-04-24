@@ -166,8 +166,8 @@ export default {
     if (this.editAble) {
       this.$confirm('数据未保存，确定保存吗?', '提示', { type: 'warning' })
         .then(() => {
-          this.$store.dispatch('dashboardSave');
-          next();
+          this.$store.dispatch('dashboardSave').then(() => { next(); });
+          // next();
         })
         .catch(() => {
           this.$store.commit('SET_EDIT_STATUS', false);

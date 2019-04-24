@@ -26,7 +26,7 @@ export default {
   height: 428px;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.3);
-  z-index: 111;
+  z-index: 1111111;
   video {
     position: absolute;
     left: 50%;
@@ -34,4 +34,5 @@ export default {
     transform: translate(-50%, -50%);
   }
 }
+@import "~scss_about1920";
 </style>

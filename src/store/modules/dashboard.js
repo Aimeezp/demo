@@ -176,21 +176,30 @@ const dashboard = {
         return newArr;
       };
 
+      function runPromise() {
+        return new Promise(((resolve) => {
+          Message({
+            message: '保存成功！',
+            type: 'success',
+            duration: 1000,
+            onClose() {
+              resolve();
+            },
+          });
+        }));
+      }
       const iconList = formatBackArr(getters.leftList);
       const blockList = formatBackArr(getters.rightList);
       const result = await window.vaApi.dashboardSave({
         iconList,
         blockList,
-      }).then(({
+      }).then(async ({
         data: {
           status,
         },
       }) => {
         if (parseInt(status, 10) === 1) {
-          Message({
-            message: '保存成功！',
-            type: 'success',
-            duration: 3000,
+          await runPromise().then(() => {
           });
           commit('SET_EDIT_STATUS', false);
           dispatch('getDashboardList');

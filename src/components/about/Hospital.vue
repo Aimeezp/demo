@@ -5,6 +5,7 @@
       :key="inx"
       :list="item.list"
       :className="item.className"
+      :showLine="item.showLine"
     ></pentagon-list>
     <img :src="personImg" class="person-img">
   </div>
@@ -80,7 +81,8 @@ export default {
               mapKey: 'airQuality',
             },
           ],
-          className: 'hand-feel',
+          className: 'hos-bottom',
+          showLine: false,
         },
       ],
     };
@@ -194,4 +196,5 @@ export default {
     }
   }
 }
+@import "~scss_about1920";
 </style>

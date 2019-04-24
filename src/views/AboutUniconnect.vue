@@ -2,7 +2,7 @@
   <div id="about-wrapper" v-loading>
     <navHeader class="aboutNavHeader"/>
     <component :is="currentView" v-show="!switchState"></component>
-    <img class="semi-circle" :src="semiCircleImage">
+    <img class="semi-circle wSideIn" :src="semiCircleImage">
     <div class="circle-nav">
       <ul>
         <li
@@ -10,6 +10,7 @@
           :key="inx"
           @click="changeState(inx)"
           :class="{cur: item.current}"
+          ref="circleNavList"
         >
           <i></i>
           <span>{{ item.text }}</span>
@@ -19,8 +20,8 @@
     <div class="content-box" v-for="(item, inx) in wrapBgList" :key="inx" v-show="item.show">
       <img :src="item.src">
     </div>
-    <img :src="switchIcon" class="switch-box" @click="changeImgUrl">
-    <div class="shadow-box icon-list" v-show="switchState">
+    <img :src="switchIcon" class="switch-box" @click="changeImgUrl" ref="switchBox">
+    <div class="shadow-box icon-list" ref="shadowBox">
       <ul class="clearfix">
         <li v-for="(item, inx) in appMapping" :key="inx">
           <img :src="item.src">
@@ -31,6 +32,7 @@
   </div>
 </template>
 <script>
+import Velocity from 'velocity-animate';
 import navHeader from '@/components/NavHeader';
 import Uniconnect from '@/components/about/Uniconnect';
 import Hospital from '@/components/about/Hospital';
@@ -63,6 +65,7 @@ export default {
       semiCircleImage,
       switchIcon: closeIcon,
       switchState: false,
+      switchBox: {},
       wrapBgList: [
         {
           src: wrapbg1,
@@ -152,7 +155,29 @@ export default {
     };
   },
   created() {},
-  mounted() {},
+  mounted() {
+    const { y } = this.$refs.switchBox.getBoundingClientRect();
+    this.switchBox = {
+      top: y,
+      x: this.$refs.shadowBox.getBoundingClientRect().width,
+    };
+    this.shadowBox = {
+      h: this.$refs.shadowBox.getBoundingClientRect().height,
+      y: this.$refs.shadowBox.getBoundingClientRect().y,
+    };
+
+    this.$refs.shadowBox.style.right = `-${this.switchBox.x / 2 - 54}px`;
+    this.$refs.shadowBox.style.top = `${this.switchBox.top - this.shadowBox.h / 2}px`;
+    this.$refs.shadowBox.style.opacity = 0;
+    for (let i = 0; i < this.navTextList.length; i += 1) {
+      Velocity(this.$refs.circleNavList[i], {
+        translateX: [0, -500],
+      }, {
+        easing: 'linear',
+        duration: 1000,
+      });
+    }
+  },
   components: {
     Uniconnect,
     Hospital,
@@ -178,6 +203,27 @@ export default {
     changeImgUrl() {
       this.switchState = !this.switchState;
       this.switchIcon = this.switchState ? openIcon : closeIcon;
+      if (!this.switchState) {
+        Velocity(this.$refs.shadowBox, {
+          right: `-${this.switchBox.x / 2 - 54}px`,
+          top: `${this.switchBox.top - this.shadowBox.y}px`,
+          opacity: 0,
+          scale: 0,
+        }, {
+          easing: 'linear',
+          duration: 1000,
+        });
+      } else {
+        Velocity(this.$refs.shadowBox, {
+          right: '27px',
+          top: `${this.shadowBox.y}px`,
+          opacity: 1,
+          scale: 1,
+        }, {
+          easing: 'linear',
+          duration: 1000,
+        });
+      }
     },
   },
 };
@@ -193,6 +239,17 @@ export default {
   bottom: 0;
   right: 0;
   z-index: 99999;
+  .wSideIn{
+    animation: wSideInClass 1s linear;
+  }
+  @keyframes wSideInClass {
+    from{
+      left: -100px;
+    };
+    to{
+      left: 0;
+    };
+  }
   .aboutNavHeader {
     position: absolute;
     z-index: 1111111111;
@@ -204,6 +261,7 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     width: 151px;
+    height: 100%;
     z-index: 111;
   }
   .circle-nav {
@@ -321,4 +379,5 @@ export default {
     }
   }
 }
+@import "~scss_about1920";
 </style>

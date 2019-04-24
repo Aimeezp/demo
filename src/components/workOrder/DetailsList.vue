@@ -122,25 +122,34 @@ export default {
         background: '#DCE8F2',
       },
       // photoSrc: '',
+      imgSrc: '',
     };
   },
   computed: {
     ...mapGetters(['workOrderImg']),
-    imgSrc() {
-      let { src } = this.sendDetail;
-      if (!src && this.workOrderImg.length > 0) {
-        src = this.workOrderImg.find(v => v.indexOf(this.sendDetail.timestamp) !== -1);
-      }
-      return src;
-    },
   },
   props: ['sendDetail', 'tableColumnList'],
   methods: {
     handleClose(done) {
       done();
     },
-    showPhoto() {
+    async showPhoto() {
       this.innerVisible = true;
+      this.imgSrc = '';
+      let { src } = this.sendDetail;
+      if (!src && this.workOrderImg.length > 0) {
+        const path = this.workOrderImg.find(v => v.indexOf(this.sendDetail.timestamp) !== -1);
+        if (path) {
+          await window.vaApi
+            .getImgUrl({
+              path,
+            })
+            .then((res) => {
+              src = res.config.url;
+            });
+        }
+      }
+      this.imgSrc = src;
     },
   },
 };
